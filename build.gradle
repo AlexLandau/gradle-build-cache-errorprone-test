@@ -1,3 +1,13 @@
+buildscript {
+    def randomness = System.currentTimeMillis() % 1000
+    println("randomness: $randomness")
+    def objects = new ArrayList<Object>()
+    for (int i : 1..randomness) {
+        objects.add(new Object())
+    }
+}
+
+
 plugins {
     id 'java-library'
     id("net.ltgt.errorprone") version "0.8.1"
